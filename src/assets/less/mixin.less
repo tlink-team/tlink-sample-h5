@@ -1,0 +1,49 @@
+.clearfix {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.scrollBar {
+    &::-webkit-scrollbar-track-piece {
+        background: transparent;
+        z-index: 1;
+    }
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 12px;
+        border-radius: 4px;
+        z-index: 1;
+    }
+    &:hover::-webkit-scrollbar-thumb {
+        background: #d7d7d7;
+        border-radius: 8px;
+        z-index: 1;
+    }
+}
+
+.box-sizing() {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.box-sizing-inherit() {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    -o-box-sizing: inherit;
+    -ms-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+.webkit(@attr, @value) {
+    -wbkit-@{attr}: @value;
+    -moz-@{attr}: @value;
+    -o-@{attr}: @value;
+    -ms-@{attr}: @value;
+    @{attr}: @value;
+}

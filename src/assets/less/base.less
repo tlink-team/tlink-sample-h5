@@ -1,0 +1,173 @@
+*,
+*:before,
+*:after {
+    .box-sizing;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+header,
+hgroup,
+nav,
+section,
+article,
+aside,
+footer,
+figure,
+figcaption,
+menu,
+button {
+    padding:0;
+    margin:0;
+    border:none;
+    word-break: break-all;
+}
+@media only screen and (min-width: 751px) {
+    *{
+        .scrollBar;
+    }
+}
+html{
+    background: #fff; 
+}
+body {
+    width:100%;
+    min-height:100vh;
+    margin:0 auto;
+    font-family: @fontFamily;
+    line-height: 1.6;
+    font-size: @fontBaseSize;
+    color:@fontColor;
+    outline: 0;
+    background-color: @bgColor;
+    /* 禁止选中文本 */
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: 100%;
+    /* iphone禁用文字大小调整 */
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+    -webkit-overflow-scrolling: touch;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: normal;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset,
+img {
+    border: 0;
+}
+li {
+    list-style: none;
+}
+em,
+i {
+    font-style: normal;
+}
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    outline: none;
+    -webkit-appearence: none;
+    -ms-appearence: none;
+}
+button,
+textarea,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    border: none;
+    background: none;
+    -webkit-appearance: none;
+    outline: none;
+}
+a {
+    -webkit-touch-callout: none;
+    text-decoration: none;
+    outline: 0;
+    color:@fontColor;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+h1{
+    font-size: 16px;
+}
+h2{
+    font-size: 14px;
+}
+html,body{
+    height: 100%;
+}
+
+/* 全局样式 */
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: @placeholderColor;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: @placeholderColor;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color: @placeholderColor;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: @placeholderColor;
+}
+
+/*fade*/
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.28s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}

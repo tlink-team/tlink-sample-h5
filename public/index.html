@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title> </title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="jesse"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel=stylesheet href="./static/css/tui.min.css">
+    <link rel=stylesheet href="./static/fonts/iconfont.css">
+    <script src="./static/fonts/iconfont.js"></script>
+    <script src="./static/js/tui.min.js"></script>
+    <script src="./static/js/call-tlinkpc.min.js"></script>
+    <script src="./static/js/cordova_ios.js"></script>
+    <script src="./static/js/cordova_android.js"></script>
+    <script src="./static/js/tchat_cordova_plugins.js"></script>
+    
+    <script>
+      // 动态控制rem值实现响应式布局
+      new function (){
+        let win = 0;
+        this.width = 750;
+        this.fontSize = 100;
+        this.fun = () => {
+            win = document.getElementsByTagName("html")[0].offsetWidth;
+            if(win > 750){
+              win = 750;
+            }
+            this.widthProportion = () => {
+              let p = win/this.width;
+              return p<0.4266?0.4266:p;
+            };
+            this.changePage = () => {
+              document.getElementsByTagName("html")[0].setAttribute("style","font-size:"+this.widthProportion()*this.fontSize+"px!important");
+            }
+            this.changePage();
+        }
+        this.fun();
+        window.addEventListener("resize", () => {
+            this.fun();
+        },false);
+    };
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but vue2 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+	"autoDownload": false,
+	"identifier": "com.getech.test",
+	"name": "测试",
+	"hidden": false,
+	"showNav": 1,
+	"build": "100",
+	"version": "1.0.0",
+	"releaseNote": "测试",
+	"prodBuild": "100",
+	"prodVersion": "1.0.0",
+	"testBuild": "100",
+	"testVersion": "1.0.0",
+	"env": "test",
+	"isLocal": true
+}
