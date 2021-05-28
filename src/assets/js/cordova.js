@@ -3,6 +3,7 @@ import util from "@/assets/js/util"
 class CordovaExec {
 	constructor() {
 		try {
+			this.maxDoNum = 5;
 			this.globalMsg = '目前仅支持T信移动端';
 			this.init();
 		} catch (err) {
@@ -39,13 +40,18 @@ class CordovaExec {
 		return new Promise((resolve, reject) => {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice().then(() => {
+					// 执行次数
+					let doIndex = 0;
 					let fn = () => {
+						doIndex++;
 						cordova.exec(
 							(res) => {
 								resolve(res);
 							},
 							(err) => {
-								fn();
+								if(doIndex < this.maxDoNum) {
+									fn();
+								}
 								reject(err);
 							},
 							"MideaCommon",
@@ -69,13 +75,18 @@ class CordovaExec {
 		return new Promise((resolve, reject) => {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice().then(() => {
+					// 执行次数
+					let doIndex = 0;
 					let fn = () => {
+						doIndex++;
 						cordova.exec(
 							(res) => {
 								resolve(res);
 							},
 							(err) => {
-								fn();
+								if(doIndex < this.maxDoNum) {
+									fn();
+								}
 								reject(err);
 							},
 							"MideaCommon",
@@ -99,13 +110,18 @@ class CordovaExec {
 		return new Promise((resolve, reject) => {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice().then(() => {
+					// 执行次数
+					let doIndex = 0;
 					let fn = () => {
+						doIndex++;
 						cordova.exec(
 							(res) => {
 								resolve(res);
 							},
 							(err) => {
-								fn();
+								if(doIndex < this.maxDoNum) {
+									fn();
+								}
 								reject(err);
 							},
 							"MideaCommon",
@@ -129,13 +145,18 @@ class CordovaExec {
 		return new Promise((resolve, reject) => {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice().then(() => {
+					// 执行次数
+					let doIndex = 0;
 					let fn = () => {
+						doIndex++;
 						cordova.exec(
 							(res) => {
 								resolve(res);
 							},
 							(err) => {
-								fn();
+								if(doIndex < this.maxDoNum) {
+									fn();
+								}
 								reject(err);
 							},
 							"MideaCommon",
@@ -159,13 +180,18 @@ class CordovaExec {
 		return new Promise((resolve, reject) => {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice().then(() => {
+					// 执行次数
+					let doIndex = 0;
 					let fn = () => {
+						doIndex++;
 						cordova.exec(
 							(res) => {
 								resolve(res);
 							},
 							(err) => {
-								fn();
+								if(doIndex < this.maxDoNum) {
+									fn();
+								}
 								reject(err);
 							},
 							"MideaCommon",
@@ -190,13 +216,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -224,13 +255,18 @@ class CordovaExec {
 		return new Promise((resolve, reject) => {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice().then(() => {
+					// 执行次数
+					let doIndex = 0;
 					let fn = () => {
+						doIndex++;
 						cordova.exec(
 							(res) => {
 								resolve(res);
 							},
 							(err) => {
-								fn();
+								if(doIndex < this.maxDoNum) {
+									fn();
+								}
 								reject(err);
 							},
 							"MideaCommon",
@@ -254,13 +290,18 @@ class CordovaExec {
 		return new Promise((resolve, reject) => {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice().then(() => {
+					// 执行次数
+					let doIndex = 0;
 					let fn = () => {
+						doIndex++;
 						cordova.exec(
 							(res) => {
 								resolve(res);
 							},
 							(err) => {
-								fn();
+								if(doIndex < this.maxDoNum) {
+									fn();
+								}
 								reject(err);
 							},
 							"MideaCommon",
@@ -284,13 +325,18 @@ class CordovaExec {
 		return new Promise((resolve, reject) => {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice().then(() => {
+					// 执行次数
+					let doIndex = 0;
 					let fn = () => {
+						doIndex++;
 						cordova.exec(
 							(res) => {
 								resolve(res);
 							},
 							(err) => {
-								fn();
+								if(doIndex < this.maxDoNum) {
+									fn();
+								}
 								reject(err);
 							},
 							"MideaCommon",
@@ -315,13 +361,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -349,13 +400,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -383,13 +439,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -417,13 +478,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -451,13 +517,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -485,13 +556,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -519,13 +595,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -553,13 +634,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -587,13 +673,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -621,13 +712,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -655,13 +751,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -689,13 +790,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -723,13 +829,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -757,13 +868,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -791,13 +907,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -825,13 +946,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -859,13 +985,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -893,13 +1024,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -927,13 +1063,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -961,13 +1102,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -995,13 +1141,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1029,13 +1180,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1063,13 +1219,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1097,13 +1258,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1131,13 +1297,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1165,13 +1336,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1199,13 +1375,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1233,13 +1414,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1267,13 +1453,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1301,13 +1492,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1335,13 +1531,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1369,13 +1570,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1403,13 +1609,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1437,13 +1648,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1471,13 +1687,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1505,13 +1726,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1539,13 +1765,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1573,13 +1804,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
@@ -1756,7 +1992,10 @@ class CordovaExec {
 		return new Promise((resolve, reject) => {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice().then(() => {
+					// 执行次数
+					let doIndex = 0;
 					let fn = () => {
+						doIndex++;
 						cordova.exec(
 							(success) => {
 								const result = JSON.stringify(success);
@@ -1814,13 +2053,18 @@ class CordovaExec {
 		return new Promise((resolve, reject) => {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice().then(() => {
+					// 执行次数
+					let doIndex = 0;
 					let fn = () => {
+						doIndex++;
 						cordova.exec(
 							(res) => {
 								resolve(res);
 							},
 							(err) => {
-								fn();
+								if(doIndex < this.maxDoNum) {
+									fn();
+								}
 								reject(err);
 							},
 							"MideaUser",
@@ -1844,13 +2088,18 @@ class CordovaExec {
 		return new Promise((resolve, reject) => {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice().then(() => {
+					// 执行次数
+					let doIndex = 0;
 					let fn = () => {
+						doIndex++;
 						cordova.exec(
 							(res) => {
 								resolve(res);
 							},
 							(err) => {
-								fn();
+								if(doIndex < this.maxDoNum) {
+									fn();
+								}
 								reject(err);
 							},
 							"MideaUser",
@@ -1874,13 +2123,18 @@ class CordovaExec {
 		return new Promise((resolve, reject) => {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice().then(() => {
+					// 执行次数
+					let doIndex = 0;
 					let fn = () => {
+						doIndex++;
 						cordova.exec(
 							(res) => {
 								resolve(res);
 							},
 							(err) => {
-								fn();
+								if(doIndex < this.maxDoNum) {
+									fn();
+								}
 								reject(err);
 							},
 							"MideaUser",
@@ -1904,13 +2158,18 @@ class CordovaExec {
 		return new Promise((resolve, reject) => {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice().then(() => {
+					// 执行次数
+					let doIndex = 0;
 					let fn = () => {
+						doIndex++;
 						cordova.exec(
 							(res) => {
 								resolve(res);
 							},
 							(err) => {
-								fn();
+								if(doIndex < this.maxDoNum) {
+									fn();
+								}
 								reject(err);
 							},
 							"MideaUser",
@@ -1934,13 +2193,18 @@ class CordovaExec {
 		return new Promise((resolve, reject) => {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice().then(() => {
+					// 执行次数
+					let doIndex = 0;
 					let fn = () => {
+						doIndex++;
 						cordova.exec(
 							(res) => {
 								resolve(res);
 							},
 							(err) => {
-								fn();
+								if(doIndex < this.maxDoNum) {
+									fn();
+								}
 								reject(err);
 							},
 							"MideaUser",
@@ -1964,13 +2228,18 @@ class CordovaExec {
 		return new Promise((resolve, reject) => {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice().then(() => {
+					// 执行次数
+					let doIndex = 0;
 					let fn = () => {
+						doIndex++;					
 						cordova.exec(
 							(res) => {
 								resolve(res);
 							},
 							(err) => {
-								fn();
+								if(doIndex < this.maxDoNum) {
+									fn();
+								}
 								reject(err);
 							},
 							"MideaUser",
@@ -1994,13 +2263,18 @@ class CordovaExec {
 		return new Promise((resolve, reject) => {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice().then(() => {
+					// 执行次数
+					let doIndex = 0;
 					let fn = () => {
+						doIndex++;
 						cordova.exec(
 							(res) => {
 								resolve(res);
 							},
 							(err) => {
-								fn();
+								if(doIndex < this.maxDoNum) {
+									fn();
+								}
 								reject(err);
 							},
 							"MideaBarcode",
@@ -2207,13 +2481,18 @@ class CordovaExec {
 			if (util.isTLinkMobile()) {
 				this.holdForDevice()
 					.then(() => {
+						// 执行次数
+						let doIndex = 0;
 						let fn = () => {
+							doIndex++;
 							cordova.exec(
 								(res) => {
 									resolve(res);
 								},
 								(err) => {
-									fn();
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
 									reject(err);
 								},
 								"MideaCommon",
