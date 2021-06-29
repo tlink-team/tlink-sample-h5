@@ -2514,6 +2514,45 @@ class CordovaExec {
 		});
 	}
 
+	// 69.服务台   参数 ['标题'(必传) 值'sz'|'wh']
+	callSipService(param = []) {
+		return new Promise((resolve, reject) => {
+			if (util.isTLinkMobile()) {
+				this.holdForDevice()
+					.then(() => {
+						// 执行次数
+						let doIndex = 0;
+						let fn = () => {
+							doIndex++;
+							cordova.exec(
+								(res) => {
+									resolve(res);
+								},
+								(err) => {
+									if(doIndex < this.maxDoNum) {
+										fn();
+									}
+									reject(err);
+								},
+								"MideaCommon",
+								"callSipService",
+								param
+							);
+						};
+						fn();
+					})
+					.catch((err) => {
+						reject(err);
+					});
+			}else{
+				resolve({
+					code:'1000',
+					msg:this.globalMsg,
+				})
+			}
+		});
+	}
+
 }
 
 export default new CordovaExec();
